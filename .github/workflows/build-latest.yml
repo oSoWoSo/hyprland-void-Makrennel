@@ -50,7 +50,7 @@ jobs:
 
       - name: Copy relevant packages for indexing and signing
         run: |
-          export PEM_PAT=${{ secrets.PEM_PAT }}
+          export TOKEN=${{ secrets.TOKEN }}
           export XBPS_PASSPHRASE=${{ secrets.PRIVATE_PEM_PASSPHRASE }}
           export XBPS_TARGET_ARCH=${{ env.TARGET_ARCH }}
           sudo -Eu builder $SCRIPT_DIR/index-packages
